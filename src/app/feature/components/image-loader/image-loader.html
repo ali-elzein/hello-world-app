@@ -2,3 +2,12 @@
 <!-- <div *ngFor="let img of images"> -->
   <img [src]="img" alt="Image" style="max-width: 300px; margin-bottom: 1rem;" />
 <!-- </div> -->
+<app-ui-button 
+  variant="primary"
+  [loading]="isLoading"
+  (clicked)="handleClick()"
+>
+  Update Image
+</app-ui-button>
+<p class="status-text">{{ status }}</p>
+

@@ -1,1 +1,43 @@
 <p>component2 works!</p>
+<button (click)="isVisible = !isVisible">Toggle Visibility</button>
+
+<div *ngIf="isVisible; else hiddenContent">
+  This content is visible.
+</div>
+
+<ng-template #hiddenContent>
+  This content is hidden.
+</ng-template>
+
+<div>
+  <h2>User List</h2>
+  <ul>
+    <li *ngFor="let user of users; let i = index">
+      {{ i + 1 }}. {{ user.name }} ({{ user.age }} years old)
+    </li>
+  </ul>
+</div>
+
+<div>
+  <h2>User Role: {{ userRole }}</h2>
+
+  <div [ngSwitch]="userRole">
+    <div *ngSwitchCase="'admin'">
+      <p>Welcome, Administrator! You have full access.</p>
+    </div>
+    <div *ngSwitchCase="'editor'">
+      <p>Welcome, Editor! You can create and modify content.</p>
+    </div>
+    <div *ngSwitchCase="'viewer'">
+      <p>Welcome, Viewer! You can only view content.</p>
+    </div>
+    <div *ngSwitchDefault>
+      <p>Unknown role. Please contact support.</p>
+    </div>
+  </div>
+
+  <button (click)="changeRole('admin')">Set Admin Role</button>
+  <button (click)="changeRole('editor')">Set Editor Role</button>
+  <button (click)="changeRole('viewer')">Set Viewer Role</button>
+  <button (click)="changeRole('guest')">Set Guest Role</button>
+</div>

@@ -1,0 +1,10 @@
+/* image-loader.css */
+.status-message {
+  color: #666;
+  margin-top: 10px;
+  height: 20px;
+}
+.success {
+  color: green;
+  font-weight: bold;
+}
