@@ -9,5 +9,27 @@
 <button (click)="handleClick()">Greet</button>
 
 <!-- Two-Way Binding -->
-<input [(ngModel)]="username" placeholder="Update name" />
-<p>Live update: {{ username }}</p>
+<div>
+  <input [(ngModel)]="username" placeholder="Update name" />
+  <p>Live update: {{ username }}</p>
+</div>
+
+<hr>
+<!-- Attribute Binding -->
+<table border="1">
+  <tr>
+    <td>Name</td>
+    <td>Age</td>
+    <td>Number</td>
+    <td>Address</td>
+  </tr>
+  <tr>
+    <td [attr.colspan]="4">No data available</td>
+  </tr>
+</table>
+
+<!-- Class Binding -->
+<p [class.active]="isActive">This paragraph has 'active' class if isActive is true.</p>
+
+<!-- Style Binding -->
+<p [style.color]="textColor">This text is dynamically colored using style binding.</p>

@@ -12,6 +12,9 @@ export class DataBindingComponent {
     username = 'Ali';
     imageUrl = 'assets/einstein.jpg';
 
+    isActive = true;
+    textColor = 'blue';
+
     handleClick() {
         alert(`Hello, ${this.username}!`);
     }
