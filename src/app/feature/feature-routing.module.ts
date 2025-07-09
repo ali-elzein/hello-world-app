@@ -8,6 +8,7 @@ import { inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { MessageResolver } from './message.resolver';
 import { AuthGuard } from '../auth/guards/auth.guard'
+import { DataBindingComponent } from './components/data-binding/data-binding'
 
 const routes: Routes = [
 //   { path: 'comp1', component: Component1 },
@@ -31,7 +32,8 @@ const routes: Routes = [
     //    }
     // ]
   },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'databinding', component: DataBindingComponent}
 ];
 
 @NgModule({

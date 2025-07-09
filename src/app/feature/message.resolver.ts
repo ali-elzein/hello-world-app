@@ -1,4 +1,3 @@
-// message.resolver.ts
 import { Injectable } from '@angular/core';
 import { Resolve } from '@angular/router';
 import { MyFeature } from './my-feature';

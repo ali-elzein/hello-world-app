@@ -1,0 +1,13 @@
+<!-- Interpolation -->
+<h2>My name is {{ username }}!</h2>
+
+<!-- Property Binding -->
+<img [src]="imageUrl" alt="User Avatar" width="150" />
+<br>
+
+<!-- Event Binding -->
+<button (click)="handleClick()">Greet</button>
+
+<!-- Two-Way Binding -->
+<input [(ngModel)]="username" placeholder="Update name" />
+<p>Live update: {{ username }}</p>
