@@ -12,7 +12,7 @@ export class MyFeature {
 
     getMessageAsync() {
     return of('Hello from Resolver!').pipe(
-      delay(5000)
+    //   delay(5000)
     );
   }
   constructor() { }
